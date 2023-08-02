@@ -1,0 +1,51 @@
+---
+import { Image, Picture } from "@astrojs/image/components";
+---
+
+<div class="carousel rounded-xl w-full shadow-xl overflow-hidden">
+  <div id="slide1" class="carousel-item relative overflow-hidden w-full">
+    <Picture
+      src="/nexttovan.png"
+      widths={[400, 800, 1200]}
+      aspectRatio="16:9"
+      alt="descriptive text"
+      class=""
+      fit="cover"
+      position="bottom"
+    />
+    <div
+      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+    >
+      <a href="#slide4" class="btn btn-circle">❮</a>
+      <a href="#slide2" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide2" class="carousel-item relative w-full">
+    <Picture
+      src="/mandelivering.png"
+      widths={[400, 800, 1200]}
+      aspectRatio="16:9"
+      alt="descriptive text"
+    />
+    <div
+      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+    >
+      <a href="#slide1" class="btn btn-circle">❮</a>
+      <a href="#slide3" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide3" class="carousel-item relative w-full">
+    <Picture
+      src="/parceldelivery.png"
+      widths={[400, 800, 1200]}
+      aspectRatio="16:9"
+      alt="descriptive text"
+    />
+    <div
+      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+    >
+      <a href="#slide2" class="btn btn-circle">❮</a>
+      <a href="#slide1" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+</div>

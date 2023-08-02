@@ -1,0 +1,10 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .header-text {
+      @apply font-bold text-2xl py-8;
+    }
+}  
