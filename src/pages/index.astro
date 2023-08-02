@@ -4,6 +4,7 @@ import Hero from "../components/hero.astro";
 import { Image, Picture } from "@astrojs/image/components";
 import Card from "../components/card.astro";
 import BookingForm from "../components/solid/bookingform";
+import Accordion from "../components/accordion.astro";
 
 const cards = [
   {
@@ -54,9 +55,6 @@ const cards = [
     <Hero />
   </main>
   <section class="pt-5 max-w-6xl mx-auto">
-    <h1 class="text-center header-text">
-      Simple low cost prices for all your moving needs.
-    </h1>
     <div class="px-5 lg:px-0 shadow-xl">
       <div class="overflow-hidden grid grids-cols-1 lg:grid-cols-2 gap-5">
         <figure class="">
@@ -75,18 +73,15 @@ const cards = [
             moves, and more.
           </p>
           <div>
-            <h3>Simple pricing</h3>
+            <h3 class="pb-2 font-semibold">Simple pricing</h3>
             <div class="flex justify-between bg-slate-100 mb-1 p-1">
-              <span>SWB + 1 man</span>
-              <span>£30 per hour</span>
+              <span>Transit + 1 man</span>
+              <span>from £35 per hour</span>
             </div>
-            <div class="flex justify-between bg-slate-100 mb-1 p-1">
-              <span>LWB + 1 man</span>
-              <span>£45 per hour</span>
-            </div>
+
             <div class="flex justify-between bg-slate-100 p-1">
               <span>Luton + 1 man</span>
-              <span>£60 per hour</span>
+              <span>from £45 per hour</span>
             </div>
             <span class="text-sm"
               >each additional man £25 per hour (max 3 per van)</span
@@ -98,5 +93,9 @@ const cards = [
         </div>
       </div>
     </div>
+    <div class="divider py-4"></div>
+
+    <Accordion />
+    <div class="divider py-4"></div>
   </section>
 </Layout>

@@ -2,7 +2,7 @@ import { createSignal, onCleanup } from "solid-js";
 
 function BookingForm() {
     const [bookingList, setBookingList] = createSignal<{ vehicle: string; worker: string }[]>([]);
-    const [selectedVehicle, setSelectedVehicle] = createSignal("SWB");
+    const [selectedVehicle, setSelectedVehicle] = createSignal("Transit");
     const [selectedWorker, setSelectedWorker] = createSignal("1 Person");
 
     // Function to handle adding the vehicle and worker to the list
@@ -103,28 +103,18 @@ function BookingForm() {
             <div class="flex gap-x-3">
                 <div class="flex items-center gap-x-3">
                     <label class="label">
-                        <span class="label-text">SWB</span>
+                        <span class="label-text">Transit</span>
                     </label>
                     <input
                         type="radio"
                         name="radio-2"
                         class="radio radio-primary  bg-white"
-                        onChange={() => setSelectedVehicle("SWB")}
-                        value="SWB"
+                        onChange={() => setSelectedVehicle("Transit")}
+                        value="Transit"
                         checked
                     />
                 </div>
-                <div class="flex items-center gap-x-3">
-                    <label class="label">
-                        <span class="label-text">LWB</span>
-                    </label>
-                    <input
-                        type="radio"
-                        name="radio-2"
-                        class="radio radio-primary bg-white"
-                        onChange={(e) => setSelectedVehicle('LWB')}
-                    />
-                </div>
+
                 <div class="flex items-center gap-x-3">
                     <label class="label">
                         <span class="label-text">Luton</span>
