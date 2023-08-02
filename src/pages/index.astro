@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
 import { Image, Picture } from "@astrojs/image/components";
 import Card from "../components/card.astro";
+import BookingForm from "../components/solid/bookingform";
 
 const cards = [
   {
@@ -54,12 +55,10 @@ const cards = [
   </main>
   <section class="pt-5 max-w-6xl mx-auto">
     <h1 class="text-center header-text">
-      Man And Van Services, Available 24 Hours A Day, 7 Days A Week
+      Simple low cost prices for all your moving needs.
     </h1>
-    <div class="px-5 lg:px-0">
-      <div
-        class="rounded-xl overflow-hidden shadow-xl grid grids-cols-1 lg:grid-cols-2 gap-5"
-      >
+    <div class="px-5 lg:px-0 shadow-xl">
+      <div class="overflow-hidden grid grids-cols-1 lg:grid-cols-2 gap-5">
         <figure class="">
           <Picture
             src="/manunloading.png"
@@ -93,7 +92,9 @@ const cards = [
               >each additional man £25 per hour (max 3 per van)</span
             >
           </div>
-          <a href="/manandvan" class="btn btn-primary"> Book Now</a>
+          <label for="my-drawer" class="btn btn-primary drawer-button"
+            >Book</label
+          >
         </div>
       </div>
     </div>

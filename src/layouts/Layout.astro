@@ -24,7 +24,9 @@ const { title } = Astro.props;
   </head>
   <body class="">
     <Nav />
-    <slot />
+    <div class="max-w-6xl mx-auto">
+      <slot />
+    </div>
     <div
       class="grid grid-cols-1 lg:grid-cols-3 lg:gap-3 gap-y-3 pt-12 max-w-6xl mx-auto px-5 lg:px-0"
     >
