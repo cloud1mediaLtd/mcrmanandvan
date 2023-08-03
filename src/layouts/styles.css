@@ -7,4 +7,10 @@
     .header-text {
       @apply font-bold text-2xl py-8;
     }
+
+    .activeimage {
+      @apply border-2 border-primary;
+
+    }
 }  
+

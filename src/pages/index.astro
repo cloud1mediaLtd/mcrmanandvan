@@ -5,6 +5,7 @@ import { Image, Picture } from "@astrojs/image/components";
 import Card from "../components/card.astro";
 import BookingForm from "../components/solid/bookingform";
 import Accordion from "../components/accordion.astro";
+import Gallery from "../components/solid/gallery";
 
 const cards = [
   {
@@ -48,22 +49,29 @@ const cards = [
     },
   },
 ];
+
+const images = [
+  "/nexttovan.jpeg",
+  "/mandelivering.png",
+  "/manunloading.png",
+  "/parceldelivery.png",
+];
 ---
 
 <Layout title="Welcome to MCR Movers.">
   <main>
     <Hero />
   </main>
-  <section class="pt-5 max-w-6xl mx-auto">
-    <div class="px-5 lg:px-0 shadow-xl">
+  <section class="mt-5 max-w-6xl mx-auto">
+    <div class="rounded-xl mx-5 lg:mx-0 shadow-xl overflow-hidden">
       <div class="overflow-hidden grid grids-cols-1 lg:grid-cols-2 gap-5">
         <figure class="">
           <Picture
-            src="/manunloading.png"
-            widths={[400, 800, 1200]}
+            src="/nexttovan.jpeg"
+            widths={[400, 800, 1200, 1600, 2000]}
             aspectRatio="16:9"
             alt="descriptive text"
-            class="w-full h-full object-cover"
+            class="overflow-hidden object-cover h-full w-full"
           />
         </figure>
         <div class="card-body">
@@ -94,8 +102,10 @@ const cards = [
       </div>
     </div>
     <div class="divider py-4"></div>
-
     <Accordion />
+
+    <div class="divider py-4"></div>
+    <Gallery client:load images={images} />
     <div class="divider py-4"></div>
   </section>
 </Layout>
